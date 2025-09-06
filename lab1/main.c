@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 #define ARG M_PI/6.0
-#define ACCURACY 2000000000
 
 double calc_exp(double arg, int accur) {
     double result = 1.0;
@@ -16,7 +15,8 @@ double calc_exp(double arg, int accur) {
 
 int main(void)
 {
-    double result = calc_exp(ARG, ACCURACY);
+    int N = 2000000000;
+    double result = calc_exp(ARG, N);
     printf("%.15f\n", result);
     return 0;
 } 
